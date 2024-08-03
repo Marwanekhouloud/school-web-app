@@ -1,0 +1,145 @@
+/* header desktop style */
+.header-area {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 999;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    background-color: #fff;
+    border-bottom: 3px solid #e4e4e4;
+}
+
+.icon-list {
+    display: none;
+}
+
+.list-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.list-menu li {
+    position: relative;
+    padding: 25px 20px;
+    text-transform: capitalize;
+    color: #333;
+    transition: ease .5s;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.list-menu li::after{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background: #ff3d00;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.list-menu li:hover {
+    background-color: #85cc16;
+    color: #fff;  
+}
+.list-menu li:hover::after {
+    opacity: 1;
+}
+#active-li {
+    background-color: #ff3d00;
+    color: #fff;
+}
+#active-li::after {
+    opacity: 1;
+}
+
+.list-icon {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.list-icon li {
+    margin-left: 15px;
+    margin-top: 4px;
+    transition: ease .6s;
+}
+.list-icon li svg path {
+    stroke: currentColor;
+    color: #ff3d00;
+    transition: ease .6s;
+}
+.list-icon li:hover path {
+    color: #85cc16;
+}
+.list-icon li:hover{
+    margin-top: -2px;
+}
+
+.list-menu-mobile {
+    display: none;
+}
+/* header mobile style */
+
+@media only screen and (max-width: 800px) {
+    .header-area {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    .list-menu {
+        display: none;
+    }
+    .icon-list {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .icon-list svg path {
+        stroke: currentColor;
+        color: #85cc16;
+    }
+    .list-menu-mobile {
+        display: block;
+        width: 80%;
+        height: 0;
+        padding: 0 9%;
+        overflow: hidden;
+        list-style: none;
+        transition: 0.3s ease-in-out;
+    }
+    .list-menu-mobile li {
+        position: relative;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        margin: 5px 0;
+    }
+    .list-menu-mobile li::after {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        content: "";
+        background: #85cc16;
+        opacity: 0;
+    }
+    .list-menu-mobile li:hover {
+        background-color: #85cc16;
+        color: #fff;
+    }
+    .list-menu-mobile li:hover::after {
+        opacity: 1;
+    }
+    #active-li::after {
+        opacity: 1;
+    }
+
+}

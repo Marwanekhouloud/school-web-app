@@ -1,0 +1,111 @@
+/* footer desktop styles */
+.footer-area {
+    width: 100%;
+    padding-top: 20px;
+    background-color: #222222;
+    background-image: url(../imgs/bg_footer_top.png);
+    background-position: 0% 70%;
+    background-repeat: no-repeat;
+}
+.footer-area .container {
+    width: 90%;
+    padding: 20px 0;
+    margin: auto;
+}
+.col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.row-item {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 10px 0;
+    color: #efefef;
+}
+.row-item h2 {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.row-item h2::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 70%;
+    height: 3px;
+    content: "";
+    background-color: #85cc16;
+    opacity: 1;
+}
+
+.row-item p {
+    text-align: justify;
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.row-item ul li {
+    margin-left: 0;
+    margin-right: 15px;
+}
+.col-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.col-flex:last-child {
+    margin-bottom: 0;
+}
+.col-flex i {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+.col-flex span {
+    color: #fff;
+    width: 250px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.col-flex:hover span {
+    color: #85cc16;
+}
+
+.col-flex:nth-child(2) i {
+    background-image: url(../icons/location.png);
+}
+.col-flex:nth-child(3) i{
+    background-image: url(../icons/mobile.png);
+}
+.col-flex:nth-child(4) i{
+    background-image: url(../icons/email.png);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding: 10px 5%;
+    overflow: hidden;
+    background-color: #101010;
+    color: #efefef;
+    font-size: 14px;
+}
+
+/* footer mobile styles */
+
+@media only screen and (max-width: 800px) {
+    .col-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-area {
+        background-position: 0% 90%;
+    }
+}
